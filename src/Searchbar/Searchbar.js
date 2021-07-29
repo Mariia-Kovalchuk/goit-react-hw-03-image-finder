@@ -3,7 +3,8 @@ import styles from './Searchbar.module.css';
 import { error } from "@pnotify/core";
 import "@pnotify/core/dist/PNotify.css";
 import "@pnotify/core/dist/BrightTheme.css";
-// import "@pnotify/confirm/dist/PNotifyConfirm.css";
+import PropTypes from 'prop-types';
+
 
 
 class Searchbar extends Component{
@@ -54,3 +55,7 @@ class Searchbar extends Component{
 }
 
 export default Searchbar;
+
+Searchbar.propTypes = {
+    onSubmit: PropTypes.func.isRequired
+}
